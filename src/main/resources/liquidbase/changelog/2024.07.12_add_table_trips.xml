@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="2024.07.12_add_table_trips" author="Elvin Mehreliyev">
+        <createTable schemaName="public" tableName="trips">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+
+            <column name="customer_name" type="varchar(50)"/>
+            <column name="adults" type="int"/>
+            <column name="children" type="int"/>
+            <column name="infrant" type="int"/>
+            <column name="trip_time" type="int"/>
+            <column name="price" type="float"/>
+            <column name="trip_date" type="timestamp"/>
+            <column name="place" type="varchar(50)"/>
+            <column name="additional_services" type="varchar(50)"/>
+            <column name="user_id" type ="int">
+            </column>
+        </createTable>
+
+        <addForeignKeyConstraint baseTableName="trips" baseColumnNames="user_id" constraintName="FK_user_id"
+                                 referencedTableName="users"
+                                 onDelete="CASCADE"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+</databaseChangeLog>

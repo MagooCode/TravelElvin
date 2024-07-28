@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+
+
+    <include file="/liquidbase/changelog/2024.07.12_add_table_users.xml" relativeToChangelogFile="false"/>
+    <include file="/liquidbase/changelog/2024.07.12_add_table_roles.xml" relativeToChangelogFile="false"/>
+    <include file="/liquidbase/changelog/2024.07.12_add_table_trips.xml" relativeToChangelogFile="false"/>
+    <include file="/liquidbase/changelog/2024.07.12_add_table_trip_blueprint.xml" relativeToChangelogFile="false"/>
+    <include file="/liquidbase/changelog/2024.07.12_add_table_user_roles.xml" relativeToChangelogFile="false"/>
+
+
+
+
+
+
+
+</databaseChangeLog>
